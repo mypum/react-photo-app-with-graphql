@@ -1,0 +1,9 @@
+query photoQuery($id: Int!) {
+  photo(id: $id) {
+    name,
+    imageUrl {
+      medium
+    },
+    timesViewed
+  }
+}

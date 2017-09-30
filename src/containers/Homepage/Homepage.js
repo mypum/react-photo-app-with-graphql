@@ -14,8 +14,10 @@ function Homepage ({data: { loading, error, photos }}) {
           photos.map(photo => {
             return (
               <li key={`photo_item_${photo.id}`}>
-                <Link prefetch route="photo">
-                  <img src={photo.imageUrl.small} />
+                <Link prefetch route={`/photo/${photo.id}`}>
+                  <a>
+                    <img src={photo.imageUrl.small} />
+                  </a>
                 </Link>
                 <div>photo name: {photo.name}</div>
                 <div>description: {photo.description}</div>

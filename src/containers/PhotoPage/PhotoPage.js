@@ -3,7 +3,17 @@ import { Link } from 'server/routes'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-function PhotoPage ({data: { loading, error, photo }}) {
+function PhotoPage (props) {
+  const {
+    data: {
+      loading,
+      error,
+      photo
+    }
+  } = props
+
+  console.log('zzz', props);
+
   if(!loading) {
     return (
       <div>

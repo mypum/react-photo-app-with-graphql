@@ -6,29 +6,29 @@ import page from 'hocs/page'
 import Homepage from './Homepage'
 
 const ALL_PHOTOS_QUERY = gql`
-{
-  photos {
-    id,
-    name,
-    rating,
-    lens,
-    focalLength,
-    iso,
-    shutterSpeed,
-    aperture,
-    timesViewed,
-    imageUrl {
-      small,
-      medium,
-      full
-    }
-    user {
+  query allPhotosQuery {
+    photos {
       id,
-      fullname,
-      userPicUrl
+      name,
+      rating,
+      lens,
+      focalLength,
+      iso,
+      shutterSpeed,
+      aperture,
+      timesViewed,
+      imageUrl {
+        small,
+        medium,
+        full
+      }
+      user {
+        id,
+        fullname,
+        userPicUrl
+      }
     }
   }
-}
 `
 
 export default compose(

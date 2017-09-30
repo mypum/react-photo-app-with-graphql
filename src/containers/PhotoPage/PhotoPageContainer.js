@@ -2,22 +2,16 @@ import { compose } from 'recompose'
 import { gql, graphql } from 'react-apollo'
 
 import page from 'hocs/page'
-
 import PhotoPage from './PhotoPage'
-
-const PHOTO_QUERY = gql`
-{
-	photo(id: 229777907) {
-    name,
-    imageUrl {
-      medium
-    },
-    timesViewed
-  }
-}
-`
+import PHOTO_QUERY from '../../graph/photo/photo.graphql'
 
 export default compose(
   page,
-  graphql(PHOTO_QUERY)
+  graphql(PHOTO_QUERY, {
+    options: ({ url: { query: { id } } }) => ({
+      variables: {
+        id
+      }
+    })
+  })
 )(PhotoPage)
