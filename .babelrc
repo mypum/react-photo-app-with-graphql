@@ -18,5 +18,9 @@
         "cwd": "babelrc"
       }
     ]
+  ],
+  "presets": [
+    "next/babel",
+    "stage-1"
   ]
 }
