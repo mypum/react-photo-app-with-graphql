@@ -1,0 +1,17 @@
+.DS_Store
+.npm
+
+logs
+*.log
+*.map
+
+node_modules
+storybook-static
+
+build
+
+coverage
+.env
+
+src/lang/.messages/
+src/lang/th.json

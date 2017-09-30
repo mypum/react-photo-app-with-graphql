@@ -1,0 +1,22 @@
+{
+  "plugins": [
+    [
+      "module-resolver", {
+        "root": ["./src"],
+        "alias": {
+          "config": "./_config",
+          "components": "./components",
+          "containers": "./containers",
+          "graph": "./graph",
+          "hocs": "./hocs",
+          "pages": "./pages",
+          "images": "./images",
+          "modules": "./modules",
+          "styles": "./styles",
+          "utils": "./utils"
+        },
+        "cwd": "babelrc"
+      }
+    ]
+  ]
+}
