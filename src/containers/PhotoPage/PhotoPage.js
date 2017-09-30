@@ -19,6 +19,7 @@ function PhotoPage (props) {
           <a>Homepage</a>
         </Link>
         <h1>{photo.name}</h1>
+        { (photo.description !== '') && <p dangerouslySetInnerHTML={{__html: photo.description}} />}
         <div>views: {photo.timesViewed}</div>
         <img src={photo.imageUrl.medium} />
         <style jsx>{`
