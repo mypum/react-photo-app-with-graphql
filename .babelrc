@@ -17,7 +17,8 @@
         },
         "cwd": "babelrc"
       }
-    ]
+    ],
+    "babel-plugin-inline-import-graphql-ast"
   ],
   "presets": [
     "next/babel",

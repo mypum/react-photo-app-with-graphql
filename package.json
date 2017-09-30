@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.0.1",
+    "babel-plugin-inline-import-graphql-ast": "^2.0.1",
     "eslint": "^4.8.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-react": "^5.0.0",
