@@ -12,10 +12,7 @@ function create () {
   return new ApolloClient({
     ssrMode: !process.browser, // Disables forceFetch on the server (so queries are only run once)
     networkInterface: createNetworkInterface({
-      uri: 'http://localhost:4000/explorer', // Server URL (must be absolute)
-      opts: { // Additional fetch() options like `credentials` or `headers`
-        credentials: 'same-origin'
-      }
+      uri: 'http://localhost:4000', // Server URL (must be absolute)
     })
   })
 }
