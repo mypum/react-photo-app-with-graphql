@@ -1,8 +1,8 @@
-import { Link } from '../server/routes'
+import { Link } from 'server/routes'
 
 const Index = () => (
   <div>
-    <p>Hello Next.js</p>
+    <p>Homepage</p>
     <Link prefetch route="about">
       <a>About</a>
     </Link>
