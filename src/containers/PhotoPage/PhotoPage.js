@@ -12,8 +12,6 @@ function PhotoPage (props) {
     }
   } = props
 
-  console.log('zzz', props);
-
   if(!loading) {
     return (
       <div>

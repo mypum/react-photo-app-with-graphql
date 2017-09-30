@@ -1,0 +1,16 @@
+query allPhotosQuery {
+  photos {
+    id,
+    name,
+    rating,
+    timesViewed,
+    imageUrl {
+      small
+    }
+    user {
+      id,
+      fullname,
+      userPicUrl
+    }
+  }
+}
