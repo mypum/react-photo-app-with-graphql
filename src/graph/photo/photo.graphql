@@ -1,11 +1,26 @@
 query photoQuery($id: Int!) {
   photo(id: $id) {
-    id,
     name,
     description,
+    camera,
+    lens,
+    aperture,
+    focalLength,
+    shutterSpeed,
+    iso,
+    rating,
+    votesCount,
+    createdAt,
+    takenAt,
+    category,
     imageUrl {
-      medium
-    },
-    timesViewed
+      full
+    }
+    user {
+      fullname,
+      userPicUrl,
+      city,
+      country
+    }
   }
 }

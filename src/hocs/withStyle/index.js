@@ -1,6 +1,6 @@
 import React from 'react'
 import resetStyle from './reset.style.js'
-import baseStyle from './base.style.js'
+import baseStyle from './base.style'
 import gridSystem from './grid.style.js'
 import nprogress from './nprogress.style'
 

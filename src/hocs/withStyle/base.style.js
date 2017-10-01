@@ -22,8 +22,8 @@ body {
   font-size: 0.875rem;
   font-weight: normal;
   line-height: 1.5;
-  color: #292b2c;
-  background-color: #fff;
+  color: #fff;
+  background-color: #111;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
@@ -72,6 +72,7 @@ dt {
 dd {
   margin-bottom: 0.5rem;
   margin-left: 0;
+}
 
 blockquote {
   margin: 0 0 1rem;
@@ -119,16 +120,8 @@ textarea {
 
 table {
   border-collapse: collapse;
-  background-color: $table-bg;
 }
 
-caption {
-  padding-top: $table-cell-padding;
-  padding-bottom: $table-cell-padding;
-  color: $text-muted;
-  text-align: left;
-  caption-side: bottom;
-}
 
 th {
   text-align: left;
@@ -137,11 +130,6 @@ th {
 label {
   display: inline-block;
   margin-bottom: 0.5rem;
-}
-
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
 }
 
 input,
