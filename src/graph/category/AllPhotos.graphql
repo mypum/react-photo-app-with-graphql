@@ -5,7 +5,7 @@ query allPhotosQuery {
     rating,
     timesViewed,
     imageUrl {
-      small
+      medium
     }
     user {
       id,

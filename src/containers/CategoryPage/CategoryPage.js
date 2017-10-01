@@ -1,8 +1,8 @@
-import { Link } from 'server/routes'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import slugify from 'utils/slugify'
+
+import CategoryPhotoList from './CategoryPhotoList/CategoryPhotoList'
 
 function CategoryPage (props) {
   const {
@@ -21,25 +21,8 @@ function CategoryPage (props) {
           <title>React 500px with Apollo & GraphQL</title>
         </Helmet>
 
-        <h1>Homepage</h1>
-        <ul>
-          {
-            photos.map(photo => {
-              return (
-                <li key={`photo_item_${photo.id}`}>
-                  <Link prefetch route={'photo'} params={{id: photo.id, slug: slugify(photo.name)}} >
-                    <a>
-                      <img src={photo.imageUrl.small} />
-                    </a>
-                  </Link>
-                  <div>photo name: {photo.name}</div>
-                  <div>description: {photo.description}</div>
-                  <div>by: {photo.user.fullname}</div>
-                </li>
-              )
-            })
-          }
-        </ul>
+        <CategoryPhotoList data={photos} />
+
         <style jsx>{`
           li {
             background: #eee;
