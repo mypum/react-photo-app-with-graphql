@@ -5,18 +5,16 @@ import { Helmet } from 'react-helmet'
 import slugify from 'utils/slugify'
 
 import RectanglePost from 'components/common/RectanglePost/RectanglePost'
+import HomepageSidebar from './Sidebar/HomepageSidebar'
 
 import { percentage } from 'utils/style'
-import config from 'utils/style/_config'
 
 function Homepage (props) {
-  const CategoryPhotos = ['abstract', 'animal', 'black and white', 'celebrity', 'cityscape', 'advert', 'concert', 'family', 'fashion', 'cinema', 'art', 'food', 'journalism', 'landscape', 'nature']
+  const CategoryPhotos = ['abstract', 'animal', 'black and white', 'celebrity', 'cityscape', 'advert', 'concert', 'family', 'fashion', 'cinema', 'art', 'food', 'journalism', 'landscape', 'nature', 'zzzz']
 
   return (
     <div className="HomeContainer">
-      <div className="HomeSidebar">
-        HomeSidebar
-      </div>
+      <HomepageSidebar />
       <div className="HomeContent">
         <div className="HomeContentRow">
           {
@@ -36,13 +34,6 @@ function Homepage (props) {
       <style jsx>{`
         .HomeContainer {
           display: flex;
-          height: 100vh;
-        }
-
-        .HomeSidebar {
-          flex: 1 0 300px;
-          max-width: 300px;
-          background-color: #111;
         }
 
         .HomeContent {
@@ -56,8 +47,15 @@ function Homepage (props) {
         }
 
         .HomeContentColumn {
-          flex: 1 0 ${percentage(1 / 5)}
+          flex: 1 0 ${percentage(1 / 4)}
         }
+
+        @media (min-height: 960px) {
+          .HomeContentColumn {
+            flex: 1 0 ${percentage(3 / 12)}
+          }
+        }
+
       `}</style>
     </div>
   )

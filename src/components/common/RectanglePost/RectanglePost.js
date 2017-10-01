@@ -57,8 +57,10 @@ function RectanglePost (props) {
           transition: background 0.4s ease, border 0.4s ease;
         }
         .title {
+          font-size: 16px;
           color: #fff;
           font-weight: 700;
+          text-transform: uppercase;
         }
         .RectanglePost:hover .content {
           background: transparent;
