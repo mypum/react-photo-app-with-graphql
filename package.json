@@ -5,9 +5,11 @@
   "author": "Thongchai Kitiyanantawong",
   "license": "MIT",
   "scripts": {
-    "dev": "node src/server",
-    "build": "next build ./src",
-    "start": "NODE_ENV=production node src/server"
+    "dev": "npm run clean-graphql && node src/server",
+    "build": "npm run clean-graphql && next build ./src",
+    "start": "NODE_ENV=production node src/server",
+    "clean-build": "rimraf build",
+    "clean-graphql": "rimraf ./node_modules/.cache"
   },
   "dependencies": {
     "babel-plugin-module-resolver": "^2.7.1",
@@ -36,6 +38,7 @@
     "eslint-plugin-node": "^5.2.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.4.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-standard": "^3.0.1",
+    "rimraf": "^2.6.2"
   }
 }
