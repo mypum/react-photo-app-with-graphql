@@ -12,26 +12,25 @@ const handler = routes.getRequestHandler(app)
 const server = express()
 
 app.prepare()
-.then(() => {
-  server.use(handler)
+  .then(() => {
+    server.use(handler)
 
-  server.use((err, req, res, next) => {
-    if (err instanceof URIError) {
-      res.status(400)
-    }
+    server.use((err, req, res, next) => {
+      if (err instanceof URIError) {
+        res.status(400)
+      }
 
-    console.error(err)
-    app.render(req, res, '/_error', {})
+      console.error(err)
+      app.render(req, res, '/_error', {})
+    })
   })
-
-})
-.then(() => {
-  server.listen(3000, (err) => {
-    if (err) throw err
-    console.log('> Ready on http://localhost:3000')
+  .then(() => {
+    server.listen(3000, (err) => {
+      if (err) throw err
+      console.log('> Ready on http://localhost:3000')
+    })
   })
-})
-.catch((ex) => {
-  console.error(ex.stack)
-  process.exit(1)
-})
+  .catch((ex) => {
+    console.error(ex.stack)
+    process.exit(1)
+  })
