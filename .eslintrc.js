@@ -8,7 +8,9 @@ module.exports = {
     'standard',
     'standard-react'
   ],
-  plugins: [],
+  plugins: [
+    'import'
+  ],
   'rules': {
     'jsx-quotes': ["error", "prefer-double"]
   }
