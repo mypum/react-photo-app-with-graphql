@@ -1,5 +1,5 @@
 import { compose } from 'recompose'
-import { gql, graphql } from 'react-apollo'
+import { graphql } from 'react-apollo'
 
 import page from 'hocs/page'
 import PhotoPage from './PhotoPage'

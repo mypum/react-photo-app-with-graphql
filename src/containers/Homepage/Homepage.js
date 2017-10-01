@@ -27,14 +27,7 @@ function Homepage (props) {
             photos.map(photo => {
               return (
                 <li key={`photo_item_${photo.id}`}>
-                  <Link
-                    prefetch
-                    route={'photo'}
-                    params={{
-                      id: photo.id,
-                      slug: slugify(photo.name)
-                    }}
-                  >
+                  <Link prefetch route={'photo'} params={{id: photo.id, slug: slugify(photo.name)}} >
                     <a>
                       <img src={photo.imageUrl.small} />
                     </a>
