@@ -6,8 +6,10 @@ import { compose, withState, withHandlers } from 'recompose'
 function PhotoViwer ({src, title, onClickImage, onCloseLightbox, showLightBox}) {
   return (
     <div className="PhotoViwer">
-      <div className="viewer">
-        <img onClick={onClickImage} src={src} />
+      <div className="PhotoViwerWrapper">
+        <div className="viewer">
+          <img onClick={onClickImage} src={src} />
+        </div>
       </div>
       {
         showLightBox &&
@@ -21,16 +23,22 @@ function PhotoViwer ({src, title, onClickImage, onCloseLightbox, showLightBox}) 
         .PhotoViwer {
           flex-grow: 1;
         }
-        .viewer {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        .PhotoViwerWrapper {
           height: 100%;
+        }
+        .viewer {
+          position: relative;
+          height: 100%;
+          width: 100%;
         }
 
         .viewer img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
           max-height: 100%;
-          cursor: pointer;
+          cursor: zoom-in;
         }
       `}</style>
     </div>

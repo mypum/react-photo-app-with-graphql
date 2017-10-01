@@ -22,9 +22,11 @@ function PhotoPage (props) {
   if (!loading) {
     return (
       <div className="PhotoPage">
+
         <Helmet>
           <title>{photo.name} by {photo.user.fullname}</title>
         </Helmet>
+
         <PhotoViewer
           src={photo.imageUrl.full}
           title={photo.name}
