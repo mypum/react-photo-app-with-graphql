@@ -2,6 +2,7 @@ import { Link } from 'server/routes'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import slugify from 'utils/slugify'
 
 function Homepage (props) {
   const {
@@ -26,7 +27,14 @@ function Homepage (props) {
             photos.map(photo => {
               return (
                 <li key={`photo_item_${photo.id}`}>
-                  <Link prefetch route={`/photo/${photo.id}`}>
+                  <Link
+                    prefetch
+                    route={'photo'}
+                    params={{
+                      id: photo.id,
+                      slug: slugify(photo.name)
+                    }}
+                  >
                     <a>
                       <img src={photo.imageUrl.small} />
                     </a>
