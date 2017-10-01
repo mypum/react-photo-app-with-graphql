@@ -3,10 +3,10 @@ import { graphql } from 'react-apollo'
 
 import page from 'hocs/page'
 
-import Homepage from './Homepage'
+import CategoryPage from './CategoryPage'
 import ALL_PHOTOS_QUERY from 'graph/homepage/AllPhotos.graphql'
 
 export default compose(
   page,
   graphql(ALL_PHOTOS_QUERY)
-)(Homepage)
+)(CategoryPage)

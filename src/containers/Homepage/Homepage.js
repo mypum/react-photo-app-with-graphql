@@ -18,13 +18,17 @@ function Homepage (props) {
       <div className="HomeContent">
         <div className="HomeContentRow">
           {
-            CategoryPhotos.map(cat => {
+            CategoryPhotos.map((cat, index) => {
               return (
-                <div className="HomeContentColumn">
-                  <RectanglePost
-                    title={cat}
-                    imgUrl={'https://drscdn.500px.org/photo/229768723/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=a2051947f49d40f88753a5e4caf151ce029baddc462d288ed3ebe4a27007792f'}
-                  />
+                <div key={`cat_${index}`} className="HomeContentColumn">
+                  <Link prefetch route={'category'}>
+                    <a>
+                      <RectanglePost
+                        title={cat}
+                        imgUrl={'https://drscdn.500px.org/photo/229768723/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=a2051947f49d40f88753a5e4caf151ce029baddc462d288ed3ebe4a27007792f'}
+                      />
+                    </a>
+                  </Link>
                 </div>
               )
             })

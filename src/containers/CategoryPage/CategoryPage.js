@@ -4,7 +4,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import slugify from 'utils/slugify'
 
-function Homepage (props) {
+function CategoryPage (props) {
   const {
     data: {
       loading,
@@ -51,7 +51,7 @@ function Homepage (props) {
   }
   return <div>Loading</div>
 }
-Homepage.propTypes = {
+CategoryPage.propTypes = {
 }
 
-export default Homepage
+export default CategoryPage
