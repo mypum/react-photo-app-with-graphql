@@ -1,7 +1,7 @@
 import { Link } from 'server/routes'
-
 import PropTypes from 'prop-types'
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 function PhotoPage (props) {
   const {
@@ -12,9 +12,13 @@ function PhotoPage (props) {
     }
   } = props
 
-  if(!loading) {
+  if (!loading) {
+    console.log(props)
     return (
       <div>
+        <Helmet>
+          <title>{photo.name} Photo</title>
+        </Helmet>
         <Link prefetch route="/">
           <a>Homepage</a>
         </Link>
