@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 
 import { color } from 'utils/style/_config'
 
+import PhotoViewer from './PhotoViewer/PhotoViewer'
 import PhotoInfo from './PhotoInfo/PhotoInfo'
 import PhotoUserInfo from 'components/common/UserInfo/UserInfo'
 import PhotoDetail from './PhotoDetail/PhotoDetail'
@@ -24,9 +25,10 @@ function PhotoPage (props) {
         <Helmet>
           <title>{photo.name} by {photo.user.fullname}</title>
         </Helmet>
-        <div className="viewer">
-          <img src={photo.imageUrl.full} />
-        </div>
+        <PhotoViewer
+          src={photo.imageUrl.full}
+          title={photo.name}
+        />
         <div className="sidebar">
           <div className="sidebarBox">
             <PhotoUserInfo info={photo.user} />
@@ -51,18 +53,6 @@ function PhotoPage (props) {
           .PhotoPage {
             display: flex;
             height: 100vh;
-          }
-
-          .viewer {
-            flex-grow: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-          }
-
-          .viewer img {
-            max-height: 100%;
           }
 
           .sidebarBox {
@@ -96,6 +86,7 @@ function PhotoPage (props) {
   }
   return <div>loading...</div>
 }
+
 PhotoPage.propTypes = {
 }
 
