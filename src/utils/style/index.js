@@ -10,3 +10,7 @@ export function mainFont (weight = false, style = false) {
 
   return value.join(' ')
 }
+
+export function percentage (value) {
+  return `${value * 100}%`
+}

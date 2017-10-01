@@ -4,53 +4,62 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import slugify from 'utils/slugify'
 
+import RectanglePost from 'components/common/RectanglePost/RectanglePost'
+
+import { percentage } from 'utils/style'
+import config from 'utils/style/_config'
+
 function Homepage (props) {
-  const {
-    data: {
-      loading,
-      error,
-      photos
-    }
-  } = props
+  const CategoryPhotos = ['abstract', 'animal', 'black and white', 'celebrity', 'cityscape', 'advert', 'concert', 'family', 'fashion', 'cinema', 'art', 'food', 'journalism', 'landscape', 'marcro', 'nature']
 
-  if (error) return <div>erorr loading</div>
-  if (photos && photos.length) {
-    return (
-      <div>
-        <Helmet>
-          <title>React 500px with Apollo & GraphQL</title>
-        </Helmet>
-
-        <h1>Homepage</h1>
-        <ul>
+  return (
+    <div className="HomeContainer">
+      <div className="HomeSidebar">
+        HomeSidebar
+      </div>
+      <div className="HomeContent">
+        <div className="HomeContentRow">
           {
-            photos.map(photo => {
+            CategoryPhotos.map(cat => {
               return (
-                <li key={`photo_item_${photo.id}`}>
-                  <Link prefetch route={'photo'} params={{id: photo.id, slug: slugify(photo.name)}} >
-                    <a>
-                      <img src={photo.imageUrl.small} />
-                    </a>
-                  </Link>
-                  <div>photo name: {photo.name}</div>
-                  <div>description: {photo.description}</div>
-                  <div>by: {photo.user.fullname}</div>
-                </li>
+                <div className="HomeContentColumn">
+                  <RectanglePost title={cat} />
+                </div>
               )
             })
           }
-        </ul>
-        <style jsx>{`
-          li {
-            background: #eee;
-            margin-bottom: 10px;
-          }
-        `}</style>
+        </div>
       </div>
-    )
-  }
-  return <div>Loading</div>
+      <style jsx>{`
+        .HomeContainer {
+          display: flex;
+          height: 100vh;
+        }
+
+        .HomeSidebar {
+          flex: 1 0 300px;
+          max-width: 300px;
+          background-color: #111;
+        }
+
+        .HomeContent {
+          flex-grow: 1;
+        }
+
+        .HomeContentRow {
+          height: 100%;
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .HomeContentColumn {
+          flex: 1 0 ${percentage(3 / 12)}
+        }
+      `}</style>
+    </div>
+  )
 }
+
 Homepage.propTypes = {
 }
 
