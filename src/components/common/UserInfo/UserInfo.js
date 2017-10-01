@@ -9,7 +9,7 @@ function UserInfo ({info: { fullname, userPicUrl, city, country }}) {
       </div>
       <div className="UserInfo">
         <h3 className="name">{fullname}</h3>
-        <p>{city}, {country}</p>
+        <p>{city}{city !== '' && ','} {country}</p>
       </div>
       <style jsx>{`
         .PhotoUserInfo {

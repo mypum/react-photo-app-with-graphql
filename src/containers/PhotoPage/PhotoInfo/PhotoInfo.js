@@ -7,7 +7,7 @@ function PhotoInfo (props) {
       camera,
       lens,
       aperture,
-      focusLength,
+      focalLength,
       shutterSpeed,
       iso
     }
@@ -18,10 +18,10 @@ function PhotoInfo (props) {
       { !!camera && <h2>{camera}</h2> }
       { !!lens && <h3>{lens}</h3> }
       <ul>
-        { !!aperture && <li>{aperture}</li> }
-        { !!focusLength && <li>{focusLength}</li> }
-        { !!shutterSpeed && <li>{shutterSpeed}</li> }
-        { !!iso && <li>{iso}</li> }
+        { !!aperture && <li>F{aperture}</li> }
+        { !!focalLength && <li>{focalLength}mm</li> }
+        { !!shutterSpeed && <li>{shutterSpeed}s</li> }
+        { !!iso && <li>iso {iso}</li> }
       </ul>
     </div>
   )
@@ -32,7 +32,7 @@ PhotoInfo.propTypes = {
     camera: PropTypes.string,
     lens: PropTypes.string,
     aperture: PropTypes.string,
-    focusLength: PropTypes.string,
+    focalLength: PropTypes.string,
     shutterSpeed: PropTypes.string,
     iso: PropTypes.string
   })
