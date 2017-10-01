@@ -1,33 +1,33 @@
 export default `
-  html {
-    box-sizing: border-box;
-  }
+html {
+  box-sizing: border-box;
+}
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
-  @-ms-viewport {
-    width: device-width;
-  }
-  html {
-    -ms-overflow-style: scrollbar;
-    -webkit-tap-highlight-color: transparent;
-  }
+@-ms-viewport {
+  width: device-width;
+}
+html {
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+}
 
-  body {
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 0.875rem;
-    font-weight: normal;
-    line-height: 1.5;
-    color: #292b2c;
-    background-color: #fff;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    position: relative;
-  }
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #292b2c;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
@@ -98,7 +98,7 @@ figure {
 }
 
 img {
-  vertical-align: middle;
+  max-width: 100%;
 }
 
 [role="button"] {

@@ -10,7 +10,7 @@ import { percentage } from 'utils/style'
 import config from 'utils/style/_config'
 
 function Homepage (props) {
-  const CategoryPhotos = ['abstract', 'animal', 'black and white', 'celebrity', 'cityscape', 'advert', 'concert', 'family', 'fashion', 'cinema', 'art', 'food', 'journalism', 'landscape', 'marcro', 'nature']
+  const CategoryPhotos = ['abstract', 'animal', 'black and white', 'celebrity', 'cityscape', 'advert', 'concert', 'family', 'fashion', 'cinema', 'art', 'food', 'journalism', 'landscape', 'nature']
 
   return (
     <div className="HomeContainer">
@@ -23,7 +23,10 @@ function Homepage (props) {
             CategoryPhotos.map(cat => {
               return (
                 <div className="HomeContentColumn">
-                  <RectanglePost title={cat} />
+                  <RectanglePost
+                    title={cat}
+                    imgUrl={'https://drscdn.500px.org/photo/229768723/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=a2051947f49d40f88753a5e4caf151ce029baddc462d288ed3ebe4a27007792f'}
+                  />
                 </div>
               )
             })
@@ -53,7 +56,7 @@ function Homepage (props) {
         }
 
         .HomeContentColumn {
-          flex: 1 0 ${percentage(3 / 12)}
+          flex: 1 0 ${percentage(1 / 5)}
         }
       `}</style>
     </div>
