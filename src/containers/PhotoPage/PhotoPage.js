@@ -25,6 +25,7 @@ function PhotoPage (props) {
 
         <Helmet>
           <title>{photo.name} by {photo.user.fullname}</title>
+          <body className="isPhotoPage" />
         </Helmet>
 
         <PhotoViewer
@@ -55,6 +56,7 @@ function PhotoPage (props) {
           .PhotoPage {
             display: flex;
             height: 100vh;
+            border-top: 1px solid #111;
           }
 
           .sidebarBox {
