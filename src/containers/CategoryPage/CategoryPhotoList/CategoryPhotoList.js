@@ -12,13 +12,15 @@ class CategoryPhotoList extends Component {
 
     return (
       <div>
-        <Masonry>
-          {data.map(photo => (
-            <div key={`photo_item_${photo.id}`} className="col md-3 catItem">
-              <CategoryPageItem data={photo} />
-            </div>
-          ))}
-        </Masonry>
+        <div className="container">
+          <Masonry>
+            {data.map(photo => (
+              <div key={`photo_item_${photo.id}`} className="col md-4 catItem">
+                <CategoryPageItem data={photo} />
+              </div>
+            ))}
+          </Masonry>
+        </div>
         <style jsx>{`
           .catItem {
             padding: 5px;

@@ -39,7 +39,7 @@ function RectanglePost (props) {
         }
         img {
           max-width: 100%;
-          filter: grayscale(1);
+          filter: grayscale(0.8);
           transition: filter 0.4s ease;
         }
         .content {
