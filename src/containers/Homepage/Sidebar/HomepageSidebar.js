@@ -1,5 +1,7 @@
-import PropTypes from 'prop-types'
 import React from 'react'
+
+import Logo from './HomeLogo'
+import Nav from './HomeNav'
 
 import { color } from 'utils/style/_config'
 
@@ -7,7 +9,10 @@ function HomepageSidebar () {
   return (
     <div className="HomeSidebar">
       <div className="HomeSidebarFixed">
-        <div className="band" />
+        <div className="band">
+          <Logo />
+          <Nav />
+        </div>
         <div className="credit">
           <p>Created by @mypum</p>
           <a href="//github.com/mypum" target="_blank" className="github">Github</a>
@@ -29,6 +34,14 @@ function HomepageSidebar () {
           flex-direction: column;
           justify-content: space-between;
         }
+
+        .band {
+          padding: 100px 40px 40px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
         .credit {
           text-transform: uppercase;
           color: #eee;
@@ -52,8 +65,6 @@ function HomepageSidebar () {
       `}</style>
     </div>
   )
-}
-HomepageSidebar.propTypes = {
 }
 
 export default HomepageSidebar

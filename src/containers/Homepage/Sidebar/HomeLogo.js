@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'server/routes'
 
-function Logo () {
+function HomeLogo () {
   return (
     <div className="logo">
       <Link route="homepage">
@@ -13,8 +13,11 @@ function Logo () {
         </a>
       </Link>
       <style jsx>{`
+        .logo {
+          margin-bottom: 40px;
+        }
         #logo_svg {
-          width: 80px;
+          width: 150px;
           fill: #fff;
         }
       `}</style>
@@ -22,4 +25,4 @@ function Logo () {
   )
 }
 
-export default Logo
+export default HomeLogo
