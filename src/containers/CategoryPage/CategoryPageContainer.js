@@ -11,6 +11,6 @@ import ALL_PHOTOS_QUERY from 'graph/category/AllPhotos.graphql'
 
 export default compose(
   page,
-  withCommonLayout,
+  withCommonLayout(),
   graphql(ALL_PHOTOS_QUERY)
 )(CategoryPage)
