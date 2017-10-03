@@ -1,4 +1,3 @@
-import { Link } from 'server/routes'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Helmet } from 'react-helmet'
@@ -14,10 +13,8 @@ function PhotoPage (props) {
   const {
     data: {
       loading,
-      error,
       photo
-    },
-    url
+    }
   } = props
 
   if (!loading) {
@@ -89,10 +86,11 @@ function PhotoPage (props) {
       </div>
     )
   }
-  return <div>loading...</div>
+  return null
 }
 
 PhotoPage.propTypes = {
+  data: PropTypes.object
 }
 
 export default PhotoPage

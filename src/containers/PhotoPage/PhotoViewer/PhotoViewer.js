@@ -64,7 +64,8 @@ PhotoViwer.propTypes = {
   title: PropTypes.string,
   onClickImage: PropTypes.func,
   onCloseLightbox: PropTypes.func,
-  showLightBox: PropTypes.bool
+  showLightBox: PropTypes.bool,
+  imageLoaded: PropTypes.bool
 }
 
 export default compose(
