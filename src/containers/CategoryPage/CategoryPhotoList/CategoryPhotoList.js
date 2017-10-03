@@ -1,34 +1,16 @@
 import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import React from 'react'
 
-import Masonry from 'react-masonry-component'
-import CategoryPageItem from '../CategoryPageItem/CategoryPageItem'
+import CategoryPhotoRenderList from './CategoryPhotoRenderList'
 
-class CategoryPhotoList extends Component {
-  render () {
-    const {
-      data
-    } = this.props
-
-    return (
-      <div>
-        <div className="container">
-          <Masonry>
-            {data.map(photo => (
-              <div key={`photo_item_${photo.id}`} className="col md-4 catItem">
-                <CategoryPageItem data={photo} />
-              </div>
-            ))}
-          </Masonry>
-        </div>
-        <style jsx>{`
-          .catItem {
-            padding: 5px;
-          }
-        `}</style>
+function CategoryPhotoList ({data}) {
+  return (
+    <div>
+      <div className="container">
+        <CategoryPhotoRenderList data={data} />
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 CategoryPhotoList.propTypes = {

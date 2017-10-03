@@ -18,6 +18,7 @@
     "classnames": "^2.2.5",
     "date-fns": "^1.28.5",
     "express": "^4.16.1",
+    "imagesloaded": "^4.1.3",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.4",
     "next": "^4.0.0-beta.2",
