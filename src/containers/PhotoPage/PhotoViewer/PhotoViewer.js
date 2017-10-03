@@ -3,12 +3,20 @@ import React from 'react'
 import Lightbox from 'react-image-lightbox'
 import { compose, withState, withHandlers } from 'recompose'
 
-function PhotoViwer ({src, title, onClickImage, onCloseLightbox, showLightBox}) {
+import Spinner from 'components/common/Spinner/Spinner'
+import withImageLoaded from 'hocs/withImageLoaded'
+
+function PhotoViwer ({src, title, onClickImage, onCloseLightbox, showLightBox, imageLoaded}) {
+  console.log('zz', imageLoaded)
   return (
     <div className="PhotoViwer">
       <div className="PhotoViwerWrapper">
         <div className="viewer">
-          <img onClick={onClickImage} src={src} />
+          {
+            imageLoaded
+              ? <img onClick={onClickImage} src={src} />
+              : <div className="loading"><Spinner /></div>
+          }
         </div>
       </div>
       {
@@ -40,6 +48,13 @@ function PhotoViwer ({src, title, onClickImage, onCloseLightbox, showLightBox}) 
           max-height: 100%;
           cursor: zoom-in;
         }
+        .loading {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       `}</style>
     </div>
   )
@@ -61,5 +76,6 @@ export default compose(
     onCloseLightbox: ({setShowLightBox}) => e => {
       setShowLightBox(false)
     }
-  })
+  }),
+  withImageLoaded('.viewer', 'imageLoaded')
 )(PhotoViwer)
