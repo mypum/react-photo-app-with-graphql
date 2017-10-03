@@ -4,34 +4,41 @@ export default [
     catName: 'Uncategorized'
   }, {
     catID: 10,
-    catName: 'Abstract'
+    catName: 'Abstract',
+    whiteList: true
   }, {
     catID: 29,
     catName: 'Aerial'
   }, {
     catID: 11,
-    catName: 'Animals'
+    catName: 'Animals',
+    whiteList: true
   }, {
     catID: 5,
-    catName: 'Black and White'
+    catName: 'Black and White',
+    whiteList: true
   }, {
     catID: 1,
     catName: 'Celebrities'
   }, {
     catID: 9,
-    catName: 'City and Architecture'
+    catName: 'City and Architecture',
+    whiteList: true
   }, {
     catID: 15,
     catName: 'Commercial'
   }, {
     catID: 16,
-    catName: 'Concert'
+    catName: 'Concert',
+    whiteList: true
   }, {
     catID: 20,
-    catName: 'Family'
+    catName: 'Family',
+    whiteList: true
   }, {
     catID: 14,
-    catName: 'Fashion'
+    catName: 'Fashion',
+    whiteList: true
   }, {
     catID: 2,
     catName: 'Film'
@@ -46,13 +53,15 @@ export default [
     catName: 'Journalism'
   }, {
     catID: 8,
-    catName: 'Landscapes'
+    catName: 'Landscapes',
+    whiteList: true
   }, {
     catID: 12,
     catName: 'Macro'
   }, {
     catID: 18,
-    catName: 'Nature'
+    catName: 'Nature',
+    whiteList: true
   }, {
     catID: 30,
     catName: 'Night'
@@ -61,7 +70,8 @@ export default [
     catName: 'Nude'
   }, {
     catID: 7,
-    catName: 'People'
+    catName: 'People',
+    whiteList: true
   }, {
     catID: 19,
     catName: 'Performing Arts'
@@ -73,10 +83,8 @@ export default [
     catName: 'Still Life'
   }, {
     catID: 21,
-    catName: 'Street'
-  }, {
-    catID: 6,
-    catName: 'Street'
+    catName: 'Street',
+    whiteList: true
   }, {
     catID: 26,
     catName: 'Transportation'
@@ -85,7 +93,8 @@ export default [
     catName: 'Travel'
   }, {
     catID: 22,
-    catName: 'Underwater'
+    catName: 'Underwater',
+    whiteList: true
   }, {
     catID: 27,
     catName: 'Urban Exploration'
