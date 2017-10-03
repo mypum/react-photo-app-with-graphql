@@ -7,7 +7,6 @@ import CategoryPhotoList from './CategoryPhotoList/CategoryPhotoList'
 function CategoryPage (props) {
   const {
     data: {
-      loading,
       error,
       photos
     }
@@ -35,6 +34,7 @@ function CategoryPage (props) {
   return <div>Loading</div>
 }
 CategoryPage.propTypes = {
+  data: PropTypes.object
 }
 
 export default CategoryPage
