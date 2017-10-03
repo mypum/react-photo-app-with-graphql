@@ -1,6 +1,6 @@
 import { compose } from 'recompose'
 import { graphql } from 'react-apollo'
-import camelcase from 'camelcase'
+import camelcase from 'camel-case'
 import page from 'hocs/page'
 
 import CategoryPage from './CategoryPage'
