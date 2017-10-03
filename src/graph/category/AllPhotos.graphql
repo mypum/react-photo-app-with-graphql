@@ -1,9 +1,10 @@
-query allPhotosQuery {
-  photos {
+query allPhotosQuery($category: String) {
+  photos(category: $category) {
     id,
     name,
     rating,
     timesViewed,
+    category,
     imageUrl {
       medium
     }

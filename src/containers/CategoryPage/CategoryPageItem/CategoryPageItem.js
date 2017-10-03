@@ -4,7 +4,7 @@ import React from 'react'
 import slugify from 'utils/slugify'
 
 import UserInfo from 'components/common/UserInfo/UserInfo'
-
+import mapCategory from 'utils/mapCategory'
 import { color } from 'utils/style/_config'
 
 function CategoryPageItem (props) {
@@ -14,13 +14,18 @@ function CategoryPageItem (props) {
       name,
       imageUrl,
       rating,
+      category,
       user
     }
   } = props
 
   return (
     <div className="CategoryPageItem">
-      <Link prefetch route={'photo'} params={{id: id, slug: slugify(name)}} >
+      <Link prefetch route={'photo'} params={{
+        id: id,
+        slug: slugify(name),
+        category: slugify(mapCategory(category))
+      }}>
         <a>
           <img src={imageUrl.medium} />
           <div className="rating">
@@ -96,6 +101,7 @@ CategoryPageItem.propTypes = {
     id: PropTypes.number,
     name: PropTypes.string,
     description: PropTypes.string,
+    category: PropTypes.number,
     imageUrl: PropTypes.shape({
       medium: PropTypes.string
     }),

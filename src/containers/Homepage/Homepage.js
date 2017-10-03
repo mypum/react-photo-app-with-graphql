@@ -1,6 +1,7 @@
 import { Link } from 'server/routes'
 import PropTypes from 'prop-types'
 import React from 'react'
+import slugify from 'utils/slugify'
 
 import RectanglePost from 'components/common/RectanglePost/RectanglePost'
 import HomepageSidebar from './Sidebar/HomepageSidebar'
@@ -8,7 +9,6 @@ import HomepageSidebar from './Sidebar/HomepageSidebar'
 import { percentage } from 'utils/style'
 
 function Homepage ({CategoryPhotos}) {
-  console.log('CategoryPhotos', CategoryPhotos)
   return (
     <div className="HomeContainer">
       <HomepageSidebar />
@@ -18,7 +18,7 @@ function Homepage ({CategoryPhotos}) {
             CategoryPhotos.map(({catName, catID, coverImg}, index) => {
               return (
                 <div key={`${index}`} className="HomeContentColumn">
-                  <Link prefetch route={'category'}>
+                  <Link prefetch route={'category'} params={{slug: slugify(catName)}}>
                     <a>
                       <RectanglePost
                         title={catName}

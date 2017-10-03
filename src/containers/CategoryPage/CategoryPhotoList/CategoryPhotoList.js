@@ -32,9 +32,7 @@ class CategoryPhotoList extends Component {
 }
 
 CategoryPhotoList.propTypes = {
-  data: PropTypes.shape({
-    id: PropTypes.number
-  })
+  data: PropTypes.array
 }
 
 export default CategoryPhotoList

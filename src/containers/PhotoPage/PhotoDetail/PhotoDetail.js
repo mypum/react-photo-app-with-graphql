@@ -4,15 +4,18 @@ import React from 'react'
 import { Link } from 'server/routes'
 import dateFormat from 'utils/dateFormat'
 import mapCategory from 'utils/mapCategory'
+import slugify from 'utils/slugify'
 
 function PhotoDetail ({data: {category, takenAt, createdAt}}) {
+  const categoryName = mapCategory(category)
+
   return (
     <div>
       <ul>
         <li>
           <span>Category:</span>
-          <Link prefetch route={'category'}>
-            <a>{ mapCategory(category) }</a>
+          <Link prefetch route={'category'} params={{slug: slugify(categoryName)}}>
+            <a>{ categoryName }</a>
           </Link>
         </li>
         {
@@ -38,7 +41,7 @@ function PhotoDetail ({data: {category, takenAt, createdAt}}) {
 }
 PhotoDetail.propTypes = {
   data: PropTypes.shape({
-    category: PropTypes.string,
+    category: PropTypes.number,
     takenAt: PropTypes.string,
     createdAt: PropTypes.string
   })

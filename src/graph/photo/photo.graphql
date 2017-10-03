@@ -1,5 +1,5 @@
-query photoQuery($id: Int!) {
-  photo(id: $id) {
+query photoQuery($id: Int!, $category: String) {
+  photo(id: $id, category: $category) {
     name,
     description,
     camera,

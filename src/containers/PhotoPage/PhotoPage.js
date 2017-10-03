@@ -16,7 +16,8 @@ function PhotoPage (props) {
       loading,
       error,
       photo
-    }
+    },
+    url
   } = props
 
   if (!loading) {
