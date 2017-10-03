@@ -5,40 +5,52 @@ export default [
   }, {
     catID: 10,
     catName: 'Abstract',
-    whiteList: true
+    whiteList: true,
+    coverImg: 'https://drscdn.500px.org/photo/230363763/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=584e723813014db2765141ad3c2491d565a5505db19c460268985c79fe7f6eb6'
   }, {
     catID: 29,
     catName: 'Aerial'
   }, {
     catID: 11,
     catName: 'Animals',
-    whiteList: true
-  }, {
-    catID: 5,
-    catName: 'Black and White',
-    whiteList: true
+    whiteList: true,
+    coverImg: 'https://drscdn.500px.org/photo/230346935/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=b3f0f4e1ce82859cd805b8997601f74a54267d08ace6c9fc601674f7a3b2f93b'
   }, {
     catID: 1,
     catName: 'Celebrities'
   }, {
     catID: 9,
     catName: 'City and Architecture',
-    whiteList: true
+    whiteList: true,
+    coverImg: 'https://drscdn.500px.org/photo/230342619/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=fabbe77088c8236d4dac7f9a28e1badf2847eef970afdd54274fc6818db305b1'
+  }, {
+    catID: 18,
+    catName: 'Nature',
+    whiteList: true,
+    coverImg: 'https://drscdn.500px.org/photo/230359337/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=5477e05189a42e127182a5bc3810a7cd7cc021970a3507e799f68f635d6dddbf'
   }, {
     catID: 15,
     catName: 'Commercial'
   }, {
+    catID: 8,
+    catName: 'Landscapes',
+    whiteList: true,
+    coverImg: 'https://drscdn.500px.org/photo/230341697/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=c8fdc2ecf83b6bb2c4a3d50bc0323ce7e30a75bd791687a3de1758597d267b51'
+  }, {
     catID: 16,
     catName: 'Concert',
-    whiteList: true
+    whiteList: true,
+    coverImg: 'https://drscdn.500px.org/photo/230348425/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=ceed0fd174d29a564e6563841535654f80c0d62ba0940723e0aa5e12d8f96ecb'
   }, {
     catID: 20,
     catName: 'Family',
-    whiteList: true
+    whiteList: true,
+    coverImg: 'https://drscdn.500px.org/photo/230337773/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=1bd9e8df51b9ceb580460e6ffb475d15bca6c821a6e028c5bc8e198e5e71575e'
   }, {
     catID: 14,
     catName: 'Fashion',
-    whiteList: true
+    whiteList: true,
+    coverImg: 'https://drscdn.500px.org/photo/230400055/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=1eb446034f4ca35f432bb960e808af7cb488553b153dcb4f598110fb83b902d6'
   }, {
     catID: 2,
     catName: 'Film'
@@ -52,16 +64,8 @@ export default [
     catID: 3,
     catName: 'Journalism'
   }, {
-    catID: 8,
-    catName: 'Landscapes',
-    whiteList: true
-  }, {
     catID: 12,
     catName: 'Macro'
-  }, {
-    catID: 18,
-    catName: 'Nature',
-    whiteList: true
   }, {
     catID: 30,
     catName: 'Night'
@@ -71,7 +75,8 @@ export default [
   }, {
     catID: 7,
     catName: 'People',
-    whiteList: true
+    whiteList: true,
+    coverImg: 'https://drscdn.500px.org/photo/230398511/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=cf927819db65d1d1445a72bec9ba56d3d455d40b9eca637720f2b4139717d5ba'
   }, {
     catID: 19,
     catName: 'Performing Arts'
@@ -84,7 +89,8 @@ export default [
   }, {
     catID: 21,
     catName: 'Street',
-    whiteList: true
+    whiteList: true,
+    coverImg: 'https://drscdn.500px.org/photo/230343889/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=af92e8e42580522c9832c2d6c4ee308168cb76e38d38713c7626b743eac2e3d6'
   }, {
     catID: 26,
     catName: 'Transportation'
@@ -94,10 +100,16 @@ export default [
   }, {
     catID: 22,
     catName: 'Underwater',
-    whiteList: true
+    whiteList: true,
+    coverImg: 'https://drscdn.500px.org/photo/230366197/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=fcfe6bb121b3f6e367833153bbc07e4f94e1439ba616e60873b2c49721450c1a'
   }, {
     catID: 27,
     catName: 'Urban Exploration'
+  }, {
+    catID: 5,
+    catName: 'Black and White',
+    whiteList: true,
+    coverImg: 'https://drscdn.500px.org/photo/230362123/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=1cbc3d2243557bfbb3fbda5ae31ded485e764d8e88670dc4dd68d7fcfae09a4b'
   }, {
     catID: 25,
     catName: 'Wedding'

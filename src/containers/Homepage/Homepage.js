@@ -1,31 +1,28 @@
 import { Link } from 'server/routes'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Helmet } from 'react-helmet'
-import slugify from 'utils/slugify'
 
 import RectanglePost from 'components/common/RectanglePost/RectanglePost'
 import HomepageSidebar from './Sidebar/HomepageSidebar'
 
 import { percentage } from 'utils/style'
 
-function Homepage (props) {
-  const CategoryPhotos = ['abstract', 'animal', 'black and white', 'celebrity', 'cityscape', 'advert', 'concert', 'family', 'fashion', 'cinema', 'art', 'food', 'journalism', 'landscape', 'nature', 'zzzz']
-
+function Homepage ({CategoryPhotos}) {
+  console.log('CategoryPhotos', CategoryPhotos)
   return (
     <div className="HomeContainer">
       <HomepageSidebar />
       <div className="HomeContent">
         <div className="HomeContentRow">
           {
-            CategoryPhotos.map((cat, index) => {
+            CategoryPhotos.map(({catName, catID, coverImg}, index) => {
               return (
-                <div key={`cat_${index}`} className="HomeContentColumn">
+                <div key={`${index}`} className="HomeContentColumn">
                   <Link prefetch route={'category'}>
                     <a>
                       <RectanglePost
-                        title={cat}
-                        imgUrl={'https://drscdn.500px.org/photo/229768723/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=a2051947f49d40f88753a5e4caf151ce029baddc462d288ed3ebe4a27007792f'}
+                        title={catName}
+                        imgUrl={coverImg}
                       />
                     </a>
                   </Link>
@@ -66,6 +63,7 @@ function Homepage (props) {
 }
 
 Homepage.propTypes = {
+  CategoryPhotos: PropTypes.array
 }
 
 export default Homepage
