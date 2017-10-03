@@ -35,12 +35,12 @@ export default [
     catID: 8,
     catName: 'Landscapes',
     whiteList: true,
-    coverImg: 'https://drscdn.500px.org/photo/230341697/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=c8fdc2ecf83b6bb2c4a3d50bc0323ce7e30a75bd791687a3de1758597d267b51'
+    coverImg: 'https://drscdn.500px.org/photo/230343687/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=c1b46a44d29329797d718662f8012cf697ca92cc9e4bc09881eb0c483dc8f7d1'
   }, {
     catID: 16,
     catName: 'Concert',
     whiteList: true,
-    coverImg: 'https://drscdn.500px.org/photo/230348425/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=ceed0fd174d29a564e6563841535654f80c0d62ba0940723e0aa5e12d8f96ecb'
+    coverImg: 'https://drscdn.500px.org/photo/230363259/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=abe8af10d10139a7d2232ba8c2595c347c52092dbb1cb51e298969029701fffc'
   }, {
     catID: 20,
     catName: 'Family',
@@ -50,7 +50,7 @@ export default [
     catID: 14,
     catName: 'Fashion',
     whiteList: true,
-    coverImg: 'https://drscdn.500px.org/photo/230400055/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=1eb446034f4ca35f432bb960e808af7cb488553b153dcb4f598110fb83b902d6'
+    coverImg: 'https://drscdn.500px.org/photo/230348545/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=78bbd880260451c9f75a6ac3050d6377e133edffd0cb451e64f9af3010c5ab64'
   }, {
     catID: 2,
     catName: 'Film'
@@ -76,7 +76,7 @@ export default [
     catID: 7,
     catName: 'People',
     whiteList: true,
-    coverImg: 'https://drscdn.500px.org/photo/230398511/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=cf927819db65d1d1445a72bec9ba56d3d455d40b9eca637720f2b4139717d5ba'
+    coverImg: 'https://drscdn.500px.org/photo/230407367/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=a7ec30cca1255e2842a12e1673ac5244fbc9eeece8b1dc565457008b461376b9'
   }, {
     catID: 19,
     catName: 'Performing Arts'
@@ -101,7 +101,7 @@ export default [
     catID: 22,
     catName: 'Underwater',
     whiteList: true,
-    coverImg: 'https://drscdn.500px.org/photo/230366197/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=fcfe6bb121b3f6e367833153bbc07e4f94e1439ba616e60873b2c49721450c1a'
+    coverImg: 'https://drscdn.500px.org/photo/230418961/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=c661ea4abf4b7bdfb732cb6df8c72c2ab91b1dc45150f4ccecfa1b4bbab72e33'
   }, {
     catID: 27,
     catName: 'Urban Exploration'
@@ -109,7 +109,7 @@ export default [
     catID: 5,
     catName: 'Black and White',
     whiteList: true,
-    coverImg: 'https://drscdn.500px.org/photo/230362123/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=1cbc3d2243557bfbb3fbda5ae31ded485e764d8e88670dc4dd68d7fcfae09a4b'
+    coverImg: 'https://drscdn.500px.org/photo/230401309/w%3D440_h%3D440/v2?client_application_id=42625&webp=true&v=0&sig=0fc918dd920612903f259e512fa5c707b80012c0a7084109dd16b5212d7109cc'
   }, {
     catID: 25,
     catName: 'Wedding'

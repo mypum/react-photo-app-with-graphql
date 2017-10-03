@@ -15,15 +15,17 @@ function CategoryPageItem (props) {
       imageUrl,
       rating,
       category,
-      user
+      user,
+      user: {
+        fullname
+      }
     }
   } = props
-
   return (
     <div className="CategoryPageItem">
       <Link prefetch route={'photo'} params={{
         id: id,
-        slug: slugify(name),
+        slug: slugify(`${name} by ${fullname}`),
         category: slugify(mapCategory(category))
       }}>
         <a>
