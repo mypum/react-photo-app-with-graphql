@@ -7,7 +7,6 @@ import Spinner from 'components/common/Spinner/Spinner'
 import withImageLoaded from 'hocs/withImageLoaded'
 
 function PhotoViwer ({src, title, onClickImage, onCloseLightbox, showLightBox, imageLoaded}) {
-  console.log('zz', imageLoaded)
   return (
     <div className="PhotoViwer">
       <div className="PhotoViwerWrapper">
