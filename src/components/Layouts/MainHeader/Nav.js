@@ -8,12 +8,12 @@ function NavBar () {
     <div className="nav">
       <ul>
         <li>
-          <Link route="homepage">
+          <Link prefetch route="homepage">
             <a>Home</a>
           </Link>
         </li>
         <li>
-          <Link route="/">
+          <Link prefetch route="/">
             <a>Browse</a>
           </Link>
         </li>

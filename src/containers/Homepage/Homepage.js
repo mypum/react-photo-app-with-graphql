@@ -14,22 +14,17 @@ function Homepage ({CategoryPhotos}) {
       <HomepageSidebar />
       <div className="HomeContent">
         <div className="HomeContentRow">
-          {
-            CategoryPhotos.map(({catName, catID, coverImg}, index) => {
-              return (
-                <div key={`${index}`} className="HomeContentColumn">
-                  <Link prefetch route={'category'} params={{slug: slugify(catName)}}>
-                    <a>
-                      <RectanglePost
-                        title={catName}
-                        imgUrl={coverImg}
-                      />
-                    </a>
-                  </Link>
-                </div>
-              )
-            })
-          }
+          {CategoryPhotos.map(({catName, catID, coverImg}, index) => {
+            return (
+              <div key={`${index}`} className="HomeContentColumn">
+                <Link prefetch route={'category'} params={{slug: slugify(catName)}}>
+                  <a>
+                    <RectanglePost title={catName} imgUrl={coverImg} />
+                  </a>
+                </Link>
+              </div>
+            )
+          })}
         </div>
       </div>
       <style jsx>{`
